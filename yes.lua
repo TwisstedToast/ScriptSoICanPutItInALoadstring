@@ -68,8 +68,44 @@ local twissted = function()
  title.Font = Enum.Font.SourceSansBold
  title.TextScaled = true
  title.Parent = frame
+
+ local closeButton = Instance.new("TextButton")
+ closeButton.Size = UDim2.new(0.1, 0, 1, 0) 
+ closeButton.Position = UDim2.new(0.9, 0, 0, 0) 
+ closeButton.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+ closeButton.TextColor3 = Color3.fromRGB(255, 255, 255) 
+ closeButton.Text = "X"
+ closeButton.Font = Enum.Font.SourceSansBold
+ closeButton.TextScaled = true
+ closeButton.Parent = title
  
+ closeButton.MouseButton1Click:Connect(function()
+     screenGui:Destroy()
+ end)
  
+
+ local minimizeButton = Instance.new("TextButton")
+ minimizeButton.Size = UDim2.new(0.1, 0, 1, 0) 
+ minimizeButton.Position = UDim2.new(0.8, 0, 0, 0) 
+ minimizeButton.BackgroundColor3 = Color3.fromRGB(255, 255, 0) 
+ minimizeButton.TextColor3 = Color3.fromRGB(0, 0, 0) 
+ minimizeButton.Text = "_"
+ minimizeButton.Font = Enum.Font.SourceSansBold
+ minimizeButton.TextScaled = true
+ minimizeButton.Parent = title
+ 
+ local function toggleVisibility()
+     frame.Visible = not frame.Visible
+ end
+ 
+ minimizeButton.MouseButton1Click:Connect(toggleVisibility)
+ 
+ game:GetService("UserInputService").InputBegan:Connect(function(input)
+     if input.KeyCode == Enum.KeyCode.RightShift then
+         toggleVisibility()
+     end
+ end)
+
  local button = Instance.new("TextButton")
  button.Size = UDim2.new(0.4, 0, 0.2, 0) 
  button.Position = UDim2.new(0.01, 0, 0.7, 0) 
