@@ -6,6 +6,10 @@ local twissted = function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Actyrn/Scripts/main/AzureModded"))()
  end
  
+ local PrizzLife = function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/elliexmln/PrizzLife/main/pladmin.lua'))()
+ end
+
  local frame = script.Parent
  
  
@@ -60,7 +64,7 @@ local twissted = function()
  title.Position = UDim2.new(0, 0, 0, 0)
  title.BackgroundColor3 = Color3.fromRGB(0, 0, 0) 
  title.TextColor3 = Color3.fromRGB(255, 255, 255) 
- title.Text = "totally very original script"
+ title.Text = "cool script hub"
  title.Font = Enum.Font.SourceSansBold
  title.TextScaled = true
  title.Parent = frame
@@ -68,7 +72,7 @@ local twissted = function()
  
  local button = Instance.new("TextButton")
  button.Size = UDim2.new(0.4, 0, 0.2, 0) 
- button.Position = UDim2.new(0.3, 0, 0.7, 0) 
+ button.Position = UDim2.new(0.01, 0, 0.7, 0) 
  button.BackgroundColor3 = Color3.fromRGB(0, 0, 255) 
  button.TextColor3 = Color3.fromRGB(255, 255, 255) 
  button.Text = "Infinite Yield"
@@ -86,7 +90,7 @@ local twissted = function()
  button2.Position = UDim2.new(0.3, 0, 0.4, 0) 
  button2.BackgroundColor3 = Color3.fromRGB(0, 0, 255) 
  button2.TextColor3 = Color3.fromRGB(255, 255, 255) 
- button2.Text = "Dahood script yes yes"
+ button2.Text = "Da Hood"
  button2.Font = Enum.Font.SourceSansBold
  button2.TextScaled = true
  button2.Parent = frame
@@ -94,3 +98,18 @@ local twissted = function()
  button2.MouseButton1Click:Connect(function()
      YouReadThis()
  end)
+
+local button3 = Instance.new("TextButton")
+button3.Size = UDim2.new(0.4, 0, 0.2, 0) 
+button3.Position = UDim2.new(0.6, 0, 0.7, 0) 
+button3.BackgroundColor3 = Color3.fromRGB(0, 0, 255) 
+button3.TextColor3 = Color3.fromRGB(255, 255, 255) 
+button3.Text = "Prison Life"
+button3.Font = Enum.Font.SourceSansBold
+button3.TextScaled = true
+button3.Parent = frame
+
+
+button3.MouseButton1Click:Connect(function()
+    PrizzLife()
+end)
